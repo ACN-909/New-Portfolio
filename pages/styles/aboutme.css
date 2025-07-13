@@ -1,0 +1,82 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.about-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 24px;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #0078d7;
+}
+
+h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.bio {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.skills-section {
+  margin-bottom: 32px;
+}
+
+.skills-section h2 {
+  color: #0078d7;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.skills-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-section li {
+  background: #e6f0fa;
+  color: #0078d7;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.contact-section h2 {
+  color: #0078d7;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.contact-section a {
+  color: #0078d7;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
