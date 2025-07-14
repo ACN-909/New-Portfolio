@@ -1,20 +1,30 @@
 header {
+  width: 100%;
   background-color: #fff;
-  padding: 1.5rem 2rem;
   border-radius: 0 0 16px 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(37, 117, 252, 0.1);
+  border-bottom: 4px solid #2575fc;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 32px;
+  padding: 1.5rem 2rem;
+}
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #2575fc;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.2rem;
-  color: #007bff;
-  letter-spacing: 1px;
-  font-weight: 700;
+  font-size: 2.5rem;
+  color: #6a11cb;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-shadow: 1px 2px 8px #2575fc33;
 }
 
 header nav {
@@ -39,67 +49,141 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
-  color: #222;
+  color: #2575fc;
   font-size: 1.08rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 8px 18px;
   border-radius: 20px;
-  transition: background 0.2s, color 0.2s;
+  background: #e6f0fa;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(106, 17, 203, 0.08);
 }
 
 header nav ul li a:hover {
-  background: #e6f0fa;
-  color: #007bff;
+  background: #2575fc;
+  color: #fff;
   text-decoration: none;
+  box-shadow: 0 4px 16px rgba(106, 17, 203, 0.15);
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
 .hero {
   background: #fff;
-  padding: 48px 32px;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 56px 40px;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(37, 117, 252, 0.12);
   text-align: center;
-  max-width: 600px;
+  max-width: 650px;
+  border: 2px solid #2575fc;
+}
+
+.menu-toggle {
+  display: none;
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 12px;
+  box-shadow: 0 2px 8px rgba(37, 117, 252, 0.1);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.menu-toggle {
+  display: block;
+}
+header nav ul {
+  display: none;
+}
+header nav ul.nav-open {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 24px 0;
+  box-shadow: 0 8px 32px rgba(37, 117, 252, 0.12);
+  border-bottom: 2px solid #2575fc;
+  z-index: 100;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37, 117, 252, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  z-index: 999;
+}
+.scroll-top-btn:hover {
+  background: #6a11cb;
+  transform: scale(1.08);
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 16px;
+  font-size: 2.7rem;
+  color: #2575fc;
+  margin-bottom: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 8px #2575fc33;
 }
 
 .hero-intro {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 24px;
+  font-size: 1.25rem;
+  color: #444;
+  margin-bottom: 28px;
+  line-height: 1.6;
 }
 
 .hero-name {
-  color: #007bff;
+  color: #6a11cb;
   font-weight: bold;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .cta-btn {
   display: inline-block;
-  padding: 12px 32px;
-  background: #007bff;
+  padding: 14px 36px;
+  background: #2575fc;
   color: #fff;
-  border-radius: 24px;
+  border-radius: 28px;
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.08);
-  transition: background 0.2s, box-shadow 0.2s;
+  font-size: 1.15rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(37, 117, 252, 0.12);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  letter-spacing: 1px;
 }
 
 .cta-btn:hover {
-  background: #0056b3;
-  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.15);
+  background: #6a11cb;
+  box-shadow: 0 8px 32px rgba(37, 117, 252, 0.18);
+  transform: translateY(-2px) scale(1.04);
 }
